@@ -1,5 +1,5 @@
-let regex = /([A-Z]{1,}[a-z]{1,}[\d]{1,}){8,12}/;
+let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,12}$/;
+let contraseña = prompt("Ingrese una contraseña:");
 
-let contrasena = "Breyner.051207";
-
-console.log(regex.test(contrasena));
+if (regex.test(contraseña)) console.log("La contraseña es fuerte.");
+else console.log("La contraseña no cumple con los requisitos.");
